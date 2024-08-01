@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 import { Client } from '@elastic/elasticsearch';
 
+dotenv.config(); 
+
 const client = new Client({ node: 'http://localhost:9200' });
 
 const indexGames = async () => {
@@ -33,4 +35,4 @@ const indexGames = async () => {
   }
 };
 
-indexGames();
+export default indexGames;
