@@ -4,7 +4,7 @@ import { Client } from '@elastic/elasticsearch';
 const client = new Client({ node: 'http://localhost:9200' });
 
 const indexGames = async () => {
-  const apiKey = 'Y30512b3be3814eaea8f2767331365294';
+  const apiKey = process.env.RAWG_API_KEY;
   const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}&page_size=100`;
 
   try {
